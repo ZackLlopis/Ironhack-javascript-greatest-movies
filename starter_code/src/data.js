@@ -2966,4 +2966,24 @@ let movies = [
       ],
       "rate": 8
     }
-  ]
+  ];
+  function orderByYear (array) {
+    array.sort( (a, b) =>{
+      return a.year - b.year
+    });
+  };
+  
+ 
+ orderByYear(movies);
+ console.log(movies);
+ function howManyMovies(array){
+
+  let stevenMovies = array.filter( (oneMovie) =>{
+    return oneMovie.director == "Steven Spielberg" && oneMovie.genre.includes('Drama');
+  })
+
+   return stevenMovies;
+  }
+
+  howManyMovies(movies);
+  console.log(movies);
